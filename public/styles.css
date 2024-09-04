@@ -1,0 +1,95 @@
+/* public/styles.css */
+
+/* Reset styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffebf6; /* Light pink */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Style for the button container */
+#buttonContainer {
+    text-align: center;
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
+}
+
+/* Style for the buttons */
+#buttonContainer button {
+    padding: 10px 20px;
+    /* margin: 0 10px; */
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff69b4; /* Hot pink */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    vertical-align: middle; /* Align buttons vertically with form */
+}
+
+#buttonContainer button:hover {
+    background-color: #ff1493; /* Deep pink */
+}
+
+/* Form styles */
+#myForm {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center; /* Center form elements */
+    width: 400px; /* Adjust form width as needed */
+}
+
+#myForm:hover {
+    transform: scale(1.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    color: #ff69b4; /* Hot pink */
+}
+button{
+    padding: 10px 20px;
+    /* margin: 0 10px; */
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff69b4; /* Hot pink */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    vertical-align: middle; /* Align buttons vertically with form */
+}
