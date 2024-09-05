@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const FormData = require('./models/formdata');
 const { v4: uuidv4 } = require('uuid');
+const path= require('path')
 
 // const formdata = require('./models/formdata');
 // const formdata = require('./models/formdata');
@@ -24,6 +25,10 @@ app.use(bodyParser.json());
 
 // Serve static files from the public directory
 app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 // Route to handle form submission
 app.post('/submit-form', async (req, res) => {
