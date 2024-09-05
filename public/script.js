@@ -24,9 +24,18 @@ function submitForm() {
 }
 
 // fetching the data from form 
+// const mongoose = require('mongoose');
+
+// mongoose.connect("mongodb://localhost:27017");
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb://localhost:27017");
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.error('Failed to connect to MongoDB', err));
+
 
 const User = mongoose.model('User', userSchema);
 

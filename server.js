@@ -4,17 +4,20 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const FormData = require('./models/formdata');
 const { v4: uuidv4 } = require('uuid');
+
 // const formdata = require('./models/formdata');
 // const formdata = require('./models/formdata');
 
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://himanshus9325:Himanshu932595@cluster0.oxq2d.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost:27017/', 
+  { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('Error connecting to MongoDB', err));
+
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
